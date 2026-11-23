@@ -1,0 +1,100 @@
+[
+  {
+    "name": "26b-fullgpu-mtp5-ub1024-cublas",
+    "no_fit": true,
+    "extra_flags": [
+      "--fit", "off",
+      "-ngl", "99",
+      "--ubatch-size", "1024",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "5",
+      "--spec-draft-n-ubatch", "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    }
+  },
+  {
+    "name": "26b-fullgpu-mtp5-ub1024-mmq",
+    "no_fit": true,
+    "extra_flags": [
+      "--fit", "off",
+      "-ngl", "99",
+      "--ubatch-size", "1024",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "5",
+      "--spec-draft-n-ubatch", "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/build-sm89-mmq/bin"
+    }
+  },
+  {
+    "name": "26b-fullgpu-mtp6-ub1024-cublas",
+    "no_fit": true,
+    "extra_flags": [
+      "--fit", "off",
+      "-ngl", "99",
+      "--ubatch-size", "1024",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "6",
+      "--spec-draft-n-ubatch", "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    }
+  },
+  {
+    "name": "26b-fullgpu-mtp7-ub1024-cublas",
+    "no_fit": true,
+    "extra_flags": [
+      "--fit", "off",
+      "-ngl", "99",
+      "--ubatch-size", "1024",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "7",
+      "--spec-draft-n-ubatch", "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    }
+  },
+  {
+    "name": "26b-fullgpu-mtp5-ub2048-cublas",
+    "no_fit": true,
+    "extra_flags": [
+      "--fit", "off",
+      "-ngl", "99",
+      "--batch-size", "2048",
+      "--ubatch-size", "2048",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "5",
+      "--spec-draft-n-ubatch", "32"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    }
+  },
+  {
+    "name": "26b-fullgpu-mtp5-ub2048-mmq",
+    "no_fit": true,
+    "extra_flags": [
+      "--fit", "off",
+      "-ngl", "99",
+      "--batch-size", "2048",
+      "--ubatch-size", "2048",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "5",
+      "--spec-draft-n-ubatch", "32"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/build-sm89-mmq/bin"
+    }
+  }
+]

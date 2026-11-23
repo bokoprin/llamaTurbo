@@ -1,0 +1,127 @@
+[
+  {
+    "name": "26b-base-fit",
+    "extra_flags": []
+  },
+  {
+    "name": "26b-fit1024-mtp3-ub1024",
+    "extra_flags": [
+      "--fit-target", "1024",
+      "--ubatch-size", "1024",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "3",
+      "--spec-draft-n-ubatch", "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    }
+  },
+  {
+    "name": "26b-fit1024-mtp5-ub1024",
+    "extra_flags": [
+      "--fit-target", "1024",
+      "--ubatch-size", "1024",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "5",
+      "--spec-draft-n-ubatch", "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    }
+  },
+  {
+    "name": "26b-fullgpu-mtp5-ub1024",
+    "no_fit": true,
+    "extra_flags": [
+      "--fit", "off",
+      "-ngl", "99",
+      "--ubatch-size", "1024",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "5",
+      "--spec-draft-n-ubatch", "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    }
+  },
+  {
+    "name": "26b-ncmoe1-mtp5-ub1024",
+    "no_fit": true,
+    "extra_flags": [
+      "--fit", "off",
+      "-ngl", "99",
+      "--n-cpu-moe", "1",
+      "--ubatch-size", "1024",
+      "--load-mode", "none",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "5",
+      "--spec-draft-n-ubatch", "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89",
+      "GGML_CUDA_REGISTER_HOST": "1"
+    }
+  },
+  {
+    "name": "26b-ncmoe2-mtp5-ub1024",
+    "no_fit": true,
+    "extra_flags": [
+      "--fit", "off",
+      "-ngl", "99",
+      "--n-cpu-moe", "2",
+      "--ubatch-size", "1024",
+      "--load-mode", "none",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "5",
+      "--spec-draft-n-ubatch", "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89",
+      "GGML_CUDA_REGISTER_HOST": "1"
+    }
+  },
+  {
+    "name": "26b-ncmoe3-mtp5-ub1024",
+    "no_fit": true,
+    "extra_flags": [
+      "--fit", "off",
+      "-ngl", "99",
+      "--n-cpu-moe", "3",
+      "--ubatch-size", "1024",
+      "--load-mode", "none",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "5",
+      "--spec-draft-n-ubatch", "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89",
+      "GGML_CUDA_REGISTER_HOST": "1"
+    }
+  },
+  {
+    "name": "26b-ncmoe2-mtp5-ub2048",
+    "no_fit": true,
+    "extra_flags": [
+      "--fit", "off",
+      "-ngl", "99",
+      "--n-cpu-moe", "2",
+      "--batch-size", "2048",
+      "--ubatch-size", "2048",
+      "--load-mode", "none",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "5",
+      "--spec-draft-n-ubatch", "32"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89",
+      "GGML_CUDA_REGISTER_HOST": "1"
+    }
+  }
+]

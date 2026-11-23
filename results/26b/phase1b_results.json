@@ -1,0 +1,378 @@
+[
+  {
+    "name": "26b-fullgpu-mtp5-ub1024-cublas",
+    "server_bin": "/home/shinsuke/llm-benchmark-setup/src/llama.cpp/build/bin/llama-server",
+    "extra_flags": [
+      "--fit",
+      "off",
+      "-ngl",
+      "99",
+      "--ubatch-size",
+      "1024",
+      "--spec-type",
+      "draft-mtp",
+      "--spec-draft-model",
+      "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max",
+      "5",
+      "--spec-draft-n-ubatch",
+      "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    },
+    "metrics": {
+      "short": {
+        "n": 1,
+        "prefill": 787.09,
+        "decode": 212.941,
+        "wall_s": 0.447,
+        "drafted": 92,
+        "accepted": 44
+      },
+      "4k": {
+        "n": 1,
+        "prefill": 8522.16,
+        "decode": 276.871,
+        "wall_s": 0.72,
+        "drafted": 58,
+        "accepted": 51
+      },
+      "12k": {
+        "n": 1,
+        "prefill": 8886.42,
+        "decode": 251.298,
+        "wall_s": 1.663,
+        "drafted": 59,
+        "accepted": 51
+      }
+    },
+    "vram": {
+      "min_free_mib": 1013.0,
+      "max_used_mib": 14931.0
+    },
+    "placement": {
+      "offloaded": [
+        "31/31",
+        "5/5"
+      ],
+      "fit_free_mib": null
+    },
+    "confirm": {},
+    "elapsed_s": 6.3
+  },
+  {
+    "name": "26b-fullgpu-mtp5-ub1024-mmq",
+    "server_bin": "/home/shinsuke/llm-benchmark-setup/src/llama.cpp/build/bin/llama-server",
+    "extra_flags": [
+      "--fit",
+      "off",
+      "-ngl",
+      "99",
+      "--ubatch-size",
+      "1024",
+      "--spec-type",
+      "draft-mtp",
+      "--spec-draft-model",
+      "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max",
+      "5",
+      "--spec-draft-n-ubatch",
+      "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/build-sm89-mmq/bin"
+    },
+    "metrics": {
+      "short": {
+        "n": 1,
+        "prefill": 794.75,
+        "decode": 206.946,
+        "wall_s": 0.455,
+        "drafted": 92,
+        "accepted": 44
+      },
+      "4k": {
+        "n": 1,
+        "prefill": 8508.05,
+        "decode": 271.903,
+        "wall_s": 0.726,
+        "drafted": 58,
+        "accepted": 51
+      },
+      "12k": {
+        "n": 1,
+        "prefill": 8867.32,
+        "decode": 250.912,
+        "wall_s": 1.671,
+        "drafted": 59,
+        "accepted": 51
+      }
+    },
+    "vram": {
+      "min_free_mib": 1013.0,
+      "max_used_mib": 14931.0
+    },
+    "placement": {
+      "offloaded": [
+        "31/31",
+        "5/5"
+      ],
+      "fit_free_mib": null
+    },
+    "confirm": {},
+    "elapsed_s": 6.3
+  },
+  {
+    "name": "26b-fullgpu-mtp6-ub1024-cublas",
+    "server_bin": "/home/shinsuke/llm-benchmark-setup/src/llama.cpp/build/bin/llama-server",
+    "extra_flags": [
+      "--fit",
+      "off",
+      "-ngl",
+      "99",
+      "--ubatch-size",
+      "1024",
+      "--spec-type",
+      "draft-mtp",
+      "--spec-draft-model",
+      "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max",
+      "6",
+      "--spec-draft-n-ubatch",
+      "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    },
+    "metrics": {
+      "short": {
+        "n": 1,
+        "prefill": 754.01,
+        "decode": 194.39,
+        "wall_s": 0.482,
+        "drafted": 108,
+        "accepted": 44
+      },
+      "4k": {
+        "n": 1,
+        "prefill": 8519.84,
+        "decode": 277.816,
+        "wall_s": 0.715,
+        "drafted": 61,
+        "accepted": 52
+      },
+      "12k": {
+        "n": 1,
+        "prefill": 8871.05,
+        "decode": 256.082,
+        "wall_s": 1.65,
+        "drafted": 62,
+        "accepted": 52
+      }
+    },
+    "vram": {
+      "min_free_mib": 1013.0,
+      "max_used_mib": 14931.0
+    },
+    "placement": {
+      "offloaded": [
+        "31/31",
+        "5/5"
+      ],
+      "fit_free_mib": null
+    },
+    "confirm": {},
+    "elapsed_s": 6.3
+  },
+  {
+    "name": "26b-fullgpu-mtp7-ub1024-cublas",
+    "server_bin": "/home/shinsuke/llm-benchmark-setup/src/llama.cpp/build/bin/llama-server",
+    "extra_flags": [
+      "--fit",
+      "off",
+      "-ngl",
+      "99",
+      "--ubatch-size",
+      "1024",
+      "--spec-type",
+      "draft-mtp",
+      "--spec-draft-model",
+      "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max",
+      "7",
+      "--spec-draft-n-ubatch",
+      "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    },
+    "metrics": {
+      "short": {
+        "n": 1,
+        "prefill": 831.92,
+        "decode": 192.899,
+        "wall_s": 0.471,
+        "drafted": 121,
+        "accepted": 45
+      },
+      "4k": {
+        "n": 1,
+        "prefill": 8465.64,
+        "decode": 286.135,
+        "wall_s": 0.716,
+        "drafted": 64,
+        "accepted": 53
+      },
+      "12k": {
+        "n": 1,
+        "prefill": 8842.23,
+        "decode": 267.391,
+        "wall_s": 1.647,
+        "drafted": 65,
+        "accepted": 53
+      }
+    },
+    "vram": {
+      "min_free_mib": 1013.0,
+      "max_used_mib": 14931.0
+    },
+    "placement": {
+      "offloaded": [
+        "31/31",
+        "5/5"
+      ],
+      "fit_free_mib": null
+    },
+    "confirm": {},
+    "elapsed_s": 6.3
+  },
+  {
+    "name": "26b-fullgpu-mtp5-ub2048-cublas",
+    "server_bin": "/home/shinsuke/llm-benchmark-setup/src/llama.cpp/build/bin/llama-server",
+    "extra_flags": [
+      "--fit",
+      "off",
+      "-ngl",
+      "99",
+      "--batch-size",
+      "2048",
+      "--ubatch-size",
+      "2048",
+      "--spec-type",
+      "draft-mtp",
+      "--spec-draft-model",
+      "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max",
+      "5",
+      "--spec-draft-n-ubatch",
+      "32"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    },
+    "metrics": {
+      "short": {
+        "n": 1,
+        "prefill": 816.69,
+        "decode": 208.922,
+        "wall_s": 0.448,
+        "drafted": 92,
+        "accepted": 44
+      },
+      "4k": {
+        "n": 1,
+        "prefill": 8049.84,
+        "decode": 278.627,
+        "wall_s": 0.747,
+        "drafted": 53,
+        "accepted": 52
+      },
+      "12k": {
+        "n": 1,
+        "prefill": 8756.03,
+        "decode": 137.929,
+        "wall_s": 1.881,
+        "drafted": 114,
+        "accepted": 40
+      }
+    },
+    "vram": {
+      "min_free_mib": 575.0,
+      "max_used_mib": 15369.0
+    },
+    "placement": {
+      "offloaded": [
+        "31/31",
+        "5/5"
+      ],
+      "fit_free_mib": null
+    },
+    "confirm": {},
+    "elapsed_s": 6.5
+  },
+  {
+    "name": "26b-fullgpu-mtp5-ub2048-mmq",
+    "server_bin": "/home/shinsuke/llm-benchmark-setup/src/llama.cpp/build/bin/llama-server",
+    "extra_flags": [
+      "--fit",
+      "off",
+      "-ngl",
+      "99",
+      "--batch-size",
+      "2048",
+      "--ubatch-size",
+      "2048",
+      "--spec-type",
+      "draft-mtp",
+      "--spec-draft-model",
+      "/home/shinsuke/llm-benchmark-setup/gemma26b-rtx4080/opt/mtp-gemma-4-26B-A4B-it-Q4_0.gguf",
+      "--spec-draft-n-max",
+      "5",
+      "--spec-draft-n-ubatch",
+      "32"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/build-sm89-mmq/bin"
+    },
+    "metrics": {
+      "short": {
+        "n": 1,
+        "prefill": 748.97,
+        "decode": 204.526,
+        "wall_s": 0.468,
+        "drafted": 92,
+        "accepted": 44
+      },
+      "4k": {
+        "n": 1,
+        "prefill": 8091.21,
+        "decode": 274.168,
+        "wall_s": 0.748,
+        "drafted": 53,
+        "accepted": 52
+      },
+      "12k": {
+        "n": 1,
+        "prefill": 8723.99,
+        "decode": 136.355,
+        "wall_s": 1.896,
+        "drafted": 114,
+        "accepted": 40
+      }
+    },
+    "vram": {
+      "min_free_mib": 575.0,
+      "max_used_mib": 15369.0
+    },
+    "placement": {
+      "offloaded": [
+        "31/31",
+        "5/5"
+      ],
+      "fit_free_mib": null
+    },
+    "confirm": {},
+    "elapsed_s": 6.5
+  }
+]
