@@ -1,0 +1,18 @@
+[
+  {
+    "name": "v2-reghost-ub1024-t8-cublas",
+    "extra_flags": [
+      "--fit-target", "1024",
+      "--ubatch-size", "1024",
+      "--load-mode", "none",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/mtp-gemma-4-31B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "5",
+      "--spec-draft-n-ubatch", "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89",
+      "GGML_CUDA_REGISTER_HOST": "1"
+    }
+  }
+]

@@ -1,0 +1,586 @@
+[
+  {
+    "name": "codex-ref",
+    "server_bin": "/home/shinsuke/llm-benchmark-setup/src/llama.cpp/build/bin/llama-server",
+    "extra_flags": [
+      "--fit-target",
+      "1280",
+      "--ubatch-size",
+      "1024",
+      "--spec-type",
+      "draft-mtp",
+      "--spec-draft-model",
+      "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/mtp-gemma-4-31B-it-Q8_0.gguf",
+      "--spec-draft-n-max",
+      "3",
+      "--spec-draft-n-ubatch",
+      "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    },
+    "metrics": {
+      "short": {
+        "n": 1,
+        "prefill": 167.08,
+        "decode": 16.732,
+        "wall_s": 4.459,
+        "drafted": 60,
+        "accepted": 43
+      },
+      "4k": {
+        "n": 1,
+        "prefill": 1016.53,
+        "decode": 13.799,
+        "wall_s": 8.536,
+        "drafted": 60,
+        "accepted": 42
+      },
+      "12k": {
+        "n": 1,
+        "prefill": 1032.64,
+        "decode": 13.208,
+        "wall_s": 16.474,
+        "drafted": 60,
+        "accepted": 42
+      }
+    },
+    "vram": {
+      "min_free_mib": 999999.0,
+      "max_used_mib": 0.0
+    },
+    "placement": {
+      "offloaded": [],
+      "fit_free_mib": null
+    },
+    "confirm": {},
+    "elapsed_s": 36.0
+  },
+  {
+    "name": "q4mtp-fit1280",
+    "server_bin": "/home/shinsuke/llm-benchmark-setup/src/llama.cpp/build/bin/llama-server",
+    "extra_flags": [
+      "--fit-target",
+      "1280",
+      "--ubatch-size",
+      "1024",
+      "--spec-type",
+      "draft-mtp",
+      "--spec-draft-model",
+      "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/mtp-gemma-4-31B-it-Q4_0.gguf",
+      "--spec-draft-n-max",
+      "3",
+      "--spec-draft-n-ubatch",
+      "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    },
+    "metrics": {
+      "short": {
+        "n": 1,
+        "prefill": 157.74,
+        "decode": 16.987,
+        "wall_s": 4.443,
+        "drafted": 60,
+        "accepted": 43
+      },
+      "4k": {
+        "n": 1,
+        "prefill": 1017.47,
+        "decode": 11.672,
+        "wall_s": 9.365,
+        "drafted": 60,
+        "accepted": 42
+      },
+      "12k": {
+        "n": 1,
+        "prefill": 1038.28,
+        "decode": 14.122,
+        "wall_s": 16.104,
+        "drafted": 60,
+        "accepted": 42
+      }
+    },
+    "vram": {
+      "min_free_mib": 999999.0,
+      "max_used_mib": 0.0
+    },
+    "placement": {
+      "offloaded": [],
+      "fit_free_mib": null
+    },
+    "confirm": {},
+    "elapsed_s": 36.3
+  },
+  {
+    "name": "q4mtp-fit1024",
+    "server_bin": "/home/shinsuke/llm-benchmark-setup/src/llama.cpp/build/bin/llama-server",
+    "extra_flags": [
+      "--fit-target",
+      "1024",
+      "--ubatch-size",
+      "1024",
+      "--spec-type",
+      "draft-mtp",
+      "--spec-draft-model",
+      "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/mtp-gemma-4-31B-it-Q4_0.gguf",
+      "--spec-draft-n-max",
+      "3",
+      "--spec-draft-n-ubatch",
+      "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    },
+    "metrics": {
+      "short": {
+        "n": 1,
+        "prefill": 197.23,
+        "decode": 18.08,
+        "wall_s": 4.072,
+        "drafted": 57,
+        "accepted": 44
+      },
+      "4k": {
+        "n": 1,
+        "prefill": 1037.68,
+        "decode": 15.81,
+        "wall_s": 7.878,
+        "drafted": 60,
+        "accepted": 42
+      },
+      "12k": {
+        "n": 1,
+        "prefill": 1068.93,
+        "decode": 16.442,
+        "wall_s": 15.146,
+        "drafted": 56,
+        "accepted": 44
+      }
+    },
+    "vram": {
+      "min_free_mib": 999999.0,
+      "max_used_mib": 0.0
+    },
+    "placement": {
+      "offloaded": [],
+      "fit_free_mib": null
+    },
+    "confirm": {},
+    "elapsed_s": 33.7
+  },
+  {
+    "name": "q4mtp-fit896",
+    "server_bin": "/home/shinsuke/llm-benchmark-setup/src/llama.cpp/build/bin/llama-server",
+    "extra_flags": [
+      "--fit-target",
+      "896",
+      "--ubatch-size",
+      "1024",
+      "--spec-type",
+      "draft-mtp",
+      "--spec-draft-model",
+      "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/mtp-gemma-4-31B-it-Q4_0.gguf",
+      "--spec-draft-n-max",
+      "3",
+      "--spec-draft-n-ubatch",
+      "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    },
+    "metrics": {
+      "short": {
+        "n": 1,
+        "prefill": 194.55,
+        "decode": 16.144,
+        "wall_s": 4.499,
+        "drafted": 57,
+        "accepted": 44
+      },
+      "4k": {
+        "n": 1,
+        "prefill": 1026.43,
+        "decode": 14.83,
+        "wall_s": 8.183,
+        "drafted": 60,
+        "accepted": 42
+      },
+      "12k": {
+        "n": 1,
+        "prefill": 1066.98,
+        "decode": 15.907,
+        "wall_s": 15.307,
+        "drafted": 56,
+        "accepted": 44
+      }
+    },
+    "vram": {
+      "min_free_mib": 999999.0,
+      "max_used_mib": 0.0
+    },
+    "placement": {
+      "offloaded": [],
+      "fit_free_mib": null
+    },
+    "confirm": {},
+    "elapsed_s": 34.6
+  },
+  {
+    "name": "q4mtp-fit1024-t16-tb16",
+    "server_bin": "/home/shinsuke/llm-benchmark-setup/src/llama.cpp/build/bin/llama-server",
+    "extra_flags": [
+      "--fit-target",
+      "1024",
+      "--ubatch-size",
+      "1024",
+      "--threads",
+      "16",
+      "--threads-batch",
+      "16",
+      "--spec-type",
+      "draft-mtp",
+      "--spec-draft-model",
+      "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/mtp-gemma-4-31B-it-Q4_0.gguf",
+      "--spec-draft-n-max",
+      "3",
+      "--spec-draft-n-ubatch",
+      "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    },
+    "metrics": {
+      "short": {
+        "n": 1,
+        "prefill": 182.06,
+        "decode": 15.357,
+        "wall_s": 4.739,
+        "drafted": 57,
+        "accepted": 44
+      },
+      "4k": {
+        "n": 1,
+        "prefill": 1033.04,
+        "decode": 13.509,
+        "wall_s": 8.573,
+        "drafted": 60,
+        "accepted": 42
+      },
+      "12k": {
+        "n": 1,
+        "prefill": 1071.8,
+        "decode": 13.864,
+        "wall_s": 15.827,
+        "drafted": 56,
+        "accepted": 44
+      }
+    },
+    "vram": {
+      "min_free_mib": 999999.0,
+      "max_used_mib": 0.0
+    },
+    "placement": {
+      "offloaded": [],
+      "fit_free_mib": null
+    },
+    "confirm": {},
+    "elapsed_s": 35.8
+  },
+  {
+    "name": "q4mtp-fit1024-t12-tb16",
+    "server_bin": "/home/shinsuke/llm-benchmark-setup/src/llama.cpp/build/bin/llama-server",
+    "extra_flags": [
+      "--fit-target",
+      "1024",
+      "--ubatch-size",
+      "1024",
+      "--threads",
+      "12",
+      "--threads-batch",
+      "16",
+      "--spec-type",
+      "draft-mtp",
+      "--spec-draft-model",
+      "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/mtp-gemma-4-31B-it-Q4_0.gguf",
+      "--spec-draft-n-max",
+      "3",
+      "--spec-draft-n-ubatch",
+      "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    },
+    "metrics": {
+      "short": {
+        "n": 1,
+        "prefill": 175.17,
+        "decode": 15.944,
+        "wall_s": 4.613,
+        "drafted": 57,
+        "accepted": 44
+      },
+      "4k": {
+        "n": 1,
+        "prefill": 1032.65,
+        "decode": 13.514,
+        "wall_s": 8.579,
+        "drafted": 60,
+        "accepted": 42
+      },
+      "12k": {
+        "n": 1,
+        "prefill": 1078.33,
+        "decode": 13.911,
+        "wall_s": 15.753,
+        "drafted": 56,
+        "accepted": 44
+      }
+    },
+    "vram": {
+      "min_free_mib": 999999.0,
+      "max_used_mib": 0.0
+    },
+    "placement": {
+      "offloaded": [],
+      "fit_free_mib": null
+    },
+    "confirm": {},
+    "elapsed_s": 35.4
+  },
+  {
+    "name": "q4mtp-fit1024-t20-tb20",
+    "server_bin": "/home/shinsuke/llm-benchmark-setup/src/llama.cpp/build/bin/llama-server",
+    "extra_flags": [
+      "--fit-target",
+      "1024",
+      "--ubatch-size",
+      "1024",
+      "--threads",
+      "20",
+      "--threads-batch",
+      "20",
+      "--spec-type",
+      "draft-mtp",
+      "--spec-draft-model",
+      "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/mtp-gemma-4-31B-it-Q4_0.gguf",
+      "--spec-draft-n-max",
+      "3",
+      "--spec-draft-n-ubatch",
+      "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    },
+    "metrics": {
+      "short": {
+        "n": 1,
+        "prefill": 181.58,
+        "decode": 17.672,
+        "wall_s": 4.204,
+        "drafted": 57,
+        "accepted": 44
+      },
+      "4k": {
+        "n": 1,
+        "prefill": 1046.47,
+        "decode": 14.808,
+        "wall_s": 8.112,
+        "drafted": 60,
+        "accepted": 42
+      },
+      "12k": {
+        "n": 1,
+        "prefill": 1076.98,
+        "decode": 15.593,
+        "wall_s": 15.271,
+        "drafted": 56,
+        "accepted": 44
+      }
+    },
+    "vram": {
+      "min_free_mib": 999999.0,
+      "max_used_mib": 0.0
+    },
+    "placement": {
+      "offloaded": [],
+      "fit_free_mib": null
+    },
+    "confirm": {},
+    "elapsed_s": 34.2
+  },
+  {
+    "name": "q4mtp-fit1024-mtp4",
+    "server_bin": "/home/shinsuke/llm-benchmark-setup/src/llama.cpp/build/bin/llama-server",
+    "extra_flags": [
+      "--fit-target",
+      "1024",
+      "--ubatch-size",
+      "1024",
+      "--spec-type",
+      "draft-mtp",
+      "--spec-draft-model",
+      "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/mtp-gemma-4-31B-it-Q4_0.gguf",
+      "--spec-draft-n-max",
+      "4",
+      "--spec-draft-n-ubatch",
+      "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    },
+    "metrics": {
+      "short": {
+        "n": 1,
+        "prefill": 183.22,
+        "decode": 15.434,
+        "wall_s": 4.715,
+        "drafted": 64,
+        "accepted": 46
+      },
+      "4k": {
+        "n": 1,
+        "prefill": 1047.02,
+        "decode": 13.615,
+        "wall_s": 8.484,
+        "drafted": 69,
+        "accepted": 45
+      },
+      "12k": {
+        "n": 1,
+        "prefill": 1061.99,
+        "decode": 14.632,
+        "wall_s": 15.695,
+        "drafted": 63,
+        "accepted": 47
+      }
+    },
+    "vram": {
+      "min_free_mib": 999999.0,
+      "max_used_mib": 0.0
+    },
+    "placement": {
+      "offloaded": [],
+      "fit_free_mib": null
+    },
+    "confirm": {},
+    "elapsed_s": 35.5
+  },
+  {
+    "name": "q4mtp-fit1024-mtp5",
+    "server_bin": "/home/shinsuke/llm-benchmark-setup/src/llama.cpp/build/bin/llama-server",
+    "extra_flags": [
+      "--fit-target",
+      "1024",
+      "--ubatch-size",
+      "1024",
+      "--spec-type",
+      "draft-mtp",
+      "--spec-draft-model",
+      "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/mtp-gemma-4-31B-it-Q4_0.gguf",
+      "--spec-draft-n-max",
+      "5",
+      "--spec-draft-n-ubatch",
+      "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    },
+    "metrics": {
+      "short": {
+        "n": 1,
+        "prefill": 171.42,
+        "decode": 17.514,
+        "wall_s": 4.271,
+        "drafted": 71,
+        "accepted": 48
+      },
+      "4k": {
+        "n": 1,
+        "prefill": 995.24,
+        "decode": 14.355,
+        "wall_s": 8.452,
+        "drafted": 77,
+        "accepted": 47
+      },
+      "12k": {
+        "n": 1,
+        "prefill": 1069.59,
+        "decode": 16.874,
+        "wall_s": 15.051,
+        "drafted": 69,
+        "accepted": 49
+      }
+    },
+    "vram": {
+      "min_free_mib": 999999.0,
+      "max_used_mib": 0.0
+    },
+    "placement": {
+      "offloaded": [],
+      "fit_free_mib": null
+    },
+    "confirm": {},
+    "elapsed_s": 34.4
+  },
+  {
+    "name": "q4mtp-fit1024-ub2048",
+    "server_bin": "/home/shinsuke/llm-benchmark-setup/src/llama.cpp/build/bin/llama-server",
+    "extra_flags": [
+      "--fit-target",
+      "1024",
+      "--batch-size",
+      "2048",
+      "--ubatch-size",
+      "2048",
+      "--spec-type",
+      "draft-mtp",
+      "--spec-draft-model",
+      "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/mtp-gemma-4-31B-it-Q4_0.gguf",
+      "--spec-draft-n-max",
+      "3",
+      "--spec-draft-n-ubatch",
+      "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    },
+    "metrics": {
+      "short": {
+        "n": 1,
+        "prefill": 159.29,
+        "decode": 14.944,
+        "wall_s": 4.943,
+        "drafted": 60,
+        "accepted": 43
+      },
+      "4k": {
+        "n": 1,
+        "prefill": 1142.0,
+        "decode": 13.274,
+        "wall_s": 8.286,
+        "drafted": 60,
+        "accepted": 42
+      },
+      "12k": {
+        "n": 1,
+        "prefill": 1189.56,
+        "decode": 13.982,
+        "wall_s": 14.685,
+        "drafted": 56,
+        "accepted": 44
+      }
+    },
+    "vram": {
+      "min_free_mib": 999999.0,
+      "max_used_mib": 0.0
+    },
+    "placement": {
+      "offloaded": [],
+      "fit_free_mib": null
+    },
+    "confirm": {},
+    "elapsed_s": 34.4
+  }
+]

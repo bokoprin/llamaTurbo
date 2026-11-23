@@ -1,0 +1,97 @@
+[
+  {
+    "name": "v2-fit1024-mtp5-tb20-reghost",
+    "extra_flags": [
+      "--fit-target", "1024",
+      "--ubatch-size", "1024",
+      "--threads", "8",
+      "--threads-batch", "20",
+      "--load-mode", "none",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/mtp-gemma-4-31B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "5",
+      "--spec-draft-n-ubatch", "64"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89",
+      "GGML_CUDA_REGISTER_HOST": "1"
+    }
+  },
+  {
+    "name": "v2-fit896-mtp5-ub1536-tb20",
+    "extra_flags": [
+      "--fit-target", "896",
+      "--batch-size", "1536",
+      "--ubatch-size", "1536",
+      "--threads", "8",
+      "--threads-batch", "20",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/mtp-gemma-4-31B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "5",
+      "--spec-draft-n-ubatch", "32"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    }
+  },
+  {
+    "name": "v2-ot-ffn16-ub1536-mtp5",
+    "no_fit": true,
+    "extra_flags": [
+      "--fit", "off",
+      "-ngl", "99",
+      "-ot", "blk\\.(4[4-9]|5[0-9])\\.ffn_(gate|up|down)\\.weight=CPU",
+      "--batch-size", "1536",
+      "--ubatch-size", "1536",
+      "--threads", "8",
+      "--threads-batch", "20",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/mtp-gemma-4-31B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "5",
+      "--spec-draft-n-ubatch", "32"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    }
+  },
+  {
+    "name": "v2-ot-ffn17-ub2048-mtp5",
+    "no_fit": true,
+    "extra_flags": [
+      "--fit", "off",
+      "-ngl", "99",
+      "-ot", "blk\\.(4[3-9]|5[0-9])\\.ffn_(gate|up|down)\\.weight=CPU",
+      "--batch-size", "2048",
+      "--ubatch-size", "2048",
+      "--threads", "8",
+      "--threads-batch", "20",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/mtp-gemma-4-31B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "5",
+      "--spec-draft-n-ubatch", "32"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    }
+  },
+  {
+    "name": "v2-ot-ffn18-ub2048-mtp5",
+    "no_fit": true,
+    "extra_flags": [
+      "--fit", "off",
+      "-ngl", "99",
+      "-ot", "blk\\.(4[2-9]|5[0-9])\\.ffn_(gate|up|down)\\.weight=CPU",
+      "--batch-size", "2048",
+      "--ubatch-size", "2048",
+      "--threads", "8",
+      "--threads-batch", "20",
+      "--spec-type", "draft-mtp",
+      "--spec-draft-model", "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/opt-v2/mtp-gemma-4-31B-it-Q4_0.gguf",
+      "--spec-draft-n-max", "5",
+      "--spec-draft-n-ubatch", "32"
+    ],
+    "env": {
+      "LD_LIBRARY_PATH": "/home/shinsuke/llm-benchmark-setup/gemma31-rtx4080-20261123/cuda-sm89"
+    }
+  }
+]

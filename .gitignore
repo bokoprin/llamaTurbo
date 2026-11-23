@@ -1,0 +1,16 @@
+# Model weights & large binaries
+*.gguf
+*.bin
+*.safetensors
+
+# Profiler outputs
+*.nsys-rep
+*.sqlite
+*.qdrep
+
+# Build & logs
+build*/
+*.log
+__pycache__/
+*.pyc
+.DS_Store
